@@ -1,0 +1,257 @@
+[debug] [2020-05-18T02:46:51.241Z] ----------------------------------------------------------------------
+[debug] [2020-05-18T02:46:51.245Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ACER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2020-05-18T02:46:51.246Z] CLI Version:   8.0.0
+[debug] [2020-05-18T02:46:51.246Z] Platform:      win32
+[debug] [2020-05-18T02:46:51.246Z] Node Version:  v10.15.3
+[debug] [2020-05-18T02:46:51.248Z] Time:          Mon May 18 2020 08:16:51 GMT+0530 (India Standard Time)
+[debug] [2020-05-18T02:46:51.249Z] ----------------------------------------------------------------------
+[debug] [2020-05-18T02:46:51.249Z] 
+[debug] [2020-05-18T02:46:51.411Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-18T02:46:51.412Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions
+[debug] [2020-05-18T02:46:52.520Z] [hub] writing locator at C:\Users\ACER\AppData\Local\Temp\hub-shopingzone-77ff1.json
+[info] +  hub: emulator hub started at http://localhost:4400
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "D:\Project\Proad\functions" for Cloud Functions...
+[debug] [2020-05-18T02:46:54.253Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-18T02:46:54.253Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-18T02:46:54.254Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-18T02:46:54.255Z] [worker-~diagnostic~-99a758eb-ee54-461d-9c3e-74804666eb7e]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\5472 
+[debug] [2020-05-18T02:46:54.255Z] [worker-~diagnostic~-99a758eb-ee54-461d-9c3e-74804666eb7e]: BUSY 
+[debug] [2020-05-18T02:46:55.645Z] [runtime-status] [5472] Functions runtime initialized. {"cwd":"D:\\Project\\Proad\\functions","node_version":"10.15.3"} 
+[debug] [2020-05-18T02:46:55.648Z] [runtime-status] [5472] Disabled runtime features: undefined 
+[debug] [2020-05-18T02:46:55.716Z] [runtime-status] [5472] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-18T02:46:55.819Z] [runtime-status] [5472] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:46:55.832Z] [runtime-status] [5472] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-18T02:46:57.025Z] [runtime-status] [5472] Checked functions.config() {"config":{}} 
+[debug] [2020-05-18T02:46:57.027Z] [runtime-status] [5472] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:46:57.030Z] [runtime-status] [5472] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-18T02:46:57.031Z] [runtime-status] [5472] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:46:57.031Z] [runtime-status] [5472] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-18T02:47:08.722Z] [runtime-status] [5472] initializeApp(DEFAULT) {"databaseURL":"https://fir-api-9a206..firebaseio.com","storageBucket":"shopingzone-77ff1.appspot.com","projectId":"shopingzone-77ff1","credential":{"implicit":false,"projectId":"shopingzone-77ff1","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBGe5fU6Filvoj\n7HXMHIA5G9qxqBQdEhJS/2+UAcm9niFG5C1NkRto6uAbhQu9JqqH83SCUmzoGfH+\nQ1Zo0U0DdgAfHJLLkYHhU/JoFo+LpjRGbRtMyvZbzkOzvsOdtrFbo7xqr+L0ZBOm\nYC6j+lZXIB449u8/8v+kJ1nVMic1lRVCH3Zqz+oCbtFNl36YL3y2krYK0GJGL8Yw\nZx+IxkiW80gqChro+JxqwjQWKk5qnjdgmpoGDSoP5TJEYIA2l7UeaD+XS8fA+7Ga\nfEReOnR4yU2f7EghxJKGDSy5tHg7I+CbMZkl+nUJ/JEMWQe+JqmY4jEni4Tj1507\n4PKpBzXTAgMBAAECggEAEyUAgpf2hKFGTIB5j1J2DfNqg7mPwPAVPABSLiDdQPzn\n/LDLowiTaJv8uw2+Q7MNLixfbTpBzOMhoF1JuFuj4Id27J63GRKkh1P80QAHnEdO\noHrZvYvTz/dLtAriNwUxYU4C9Krae/NeFV0s0poTrFClXm1w++yaFsrF98Kgq4mf\nUiQ2JbsoOAxma3uqKkdyyA1WWok1DNucqYNIpKlbeZOBMt9phW6aIHkbj4vsTq0W\n8sc+3OHf7SuMsRuxnFnJlfkLjiXgh9iJ+uqEmpIcRhYYOfiphg12aKWRGnsszmBQ\n4kMlD75qVTaCzJLkN2JDiqPqliPm268eaE2qjUtI2QKBgQD+0IcuGP6l2ye1meV9\n9zQKLd4uUKje2CtKb+W1Xvq3rhxcMqx1liqmltEuDIXsZsMlgYGt8JnQ21AXsPQP\ncmg32EvZulqyvcgI1v0tujTdVGxZ4who0ayz1CjoEaQXuyjFC4Qpaz1yfnPayBJU\nvrpZkB0UDk+7fKocA2gh078u2wKBgQDB/+fRuoKlXUAx3nDUU3VtPBZxPCG86VUY\nNBtIyzdMoeGgrZrlnD2oAqkO/rqhOmOa1Izewvo9uOhSUgE5n+b/C+SCGuaJHWZf\no7NuJOPZwmGMr2ZsdD46Iy/JpgYfJ0R6v3zsLZHiRYbcFk8PazOytvpLXxHxua6J\nEHBZuqxaaQKBgQC/KZWgYaP4rXcW6EOgwqnJ0StTt7NYqvefOl8sN/sDfZ1NFb8H\n4AZTP+XiFAcMmPNh2cx9v3jFlSJ7A4e1ZvEEpEITL5kHaxT8fL0nZwBt4v3+WTJf\n4J0ds9aUc1eVbhVh7gfSQt+wW2lzApGt/gAzXMhT2YC7eQTtSyj956sP7QKBgBvU\n1LMX6MpEeIMvAEzVtFD5f9a647QwXU7dmtR0ovhReQcOINyz73x89Tf7f1bGA6gg\nuhzzJ+dW8a1tqlNUB1WrpRqtNUmSeC9cUs+IZ0/EPS5rs2v3uT2p8p8hPFuXzJE3\ni3puhzFI/DHy2WDC5mXLLllFyFM/ajSrsRKOX0+RAoGBANjXfU5TtK8gwOh4aod/\nsgv1zmLOL/VLrtwZjWQpLLm/rgeR4aGaf8ssX8ZYVbZB7DWJgaHgnOZPfEd7a9qK\nf45mjg/jf17Ao8eDpBkjTt7ZfyCHrpnT72I0zxV+UYkxamxCMPMdlLTpOq1PsSuy\nUpoQptRN28ACf8umFNpc0HNR\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-hjs4t@shopingzone-77ff1.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[app]: http function initialized (http://localhost:5001/shopingzone-77ff1/us-central1/app).
+[info] +  emulators: All emulators started, it is now safe to connect.
+[debug] [2020-05-18T02:47:20.398Z] [worker-~diagnostic~-99a758eb-ee54-461d-9c3e-74804666eb7e]: IDLE 
+[debug] [2020-05-18T02:53:31.575Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:53:31.577Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:53:31.577Z] Accepted request GET /shopingzone-77ff1/us-central1/app/api/read --> app
+[debug] [2020-05-18T02:53:31.589Z] [worker-pool] addWorker(app) 
+[debug] [2020-05-18T02:53:31.590Z] [worker-pool] Adding worker with key app, total=1 
+[debug] [2020-05-18T02:53:31.590Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:53:31.590Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:53:31.590Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:53:33.108Z] [runtime-status] [6152] Functions runtime initialized. {"cwd":"D:\\Project\\Proad\\functions","node_version":"10.15.3"} 
+[debug] [2020-05-18T02:53:33.112Z] [runtime-status] [6152] Disabled runtime features: undefined 
+[debug] [2020-05-18T02:53:33.119Z] [runtime-status] [6152] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:33.121Z] [runtime-status] [6152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:33.132Z] [runtime-status] [6152] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-18T02:53:33.288Z] [runtime-status] [6152] Checked functions.config() {"config":{}} 
+[debug] [2020-05-18T02:53:33.290Z] [runtime-status] [6152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:33.292Z] [runtime-status] [6152] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:33.293Z] [runtime-status] [6152] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:33.293Z] [runtime-status] [6152] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-18T02:53:34.703Z] [runtime-status] [6152] initializeApp(DEFAULT) {"databaseURL":"https://fir-api-9a206..firebaseio.com","storageBucket":"shopingzone-77ff1.appspot.com","projectId":"shopingzone-77ff1","credential":{"implicit":false,"projectId":"shopingzone-77ff1","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBGe5fU6Filvoj\n7HXMHIA5G9qxqBQdEhJS/2+UAcm9niFG5C1NkRto6uAbhQu9JqqH83SCUmzoGfH+\nQ1Zo0U0DdgAfHJLLkYHhU/JoFo+LpjRGbRtMyvZbzkOzvsOdtrFbo7xqr+L0ZBOm\nYC6j+lZXIB449u8/8v+kJ1nVMic1lRVCH3Zqz+oCbtFNl36YL3y2krYK0GJGL8Yw\nZx+IxkiW80gqChro+JxqwjQWKk5qnjdgmpoGDSoP5TJEYIA2l7UeaD+XS8fA+7Ga\nfEReOnR4yU2f7EghxJKGDSy5tHg7I+CbMZkl+nUJ/JEMWQe+JqmY4jEni4Tj1507\n4PKpBzXTAgMBAAECggEAEyUAgpf2hKFGTIB5j1J2DfNqg7mPwPAVPABSLiDdQPzn\n/LDLowiTaJv8uw2+Q7MNLixfbTpBzOMhoF1JuFuj4Id27J63GRKkh1P80QAHnEdO\noHrZvYvTz/dLtAriNwUxYU4C9Krae/NeFV0s0poTrFClXm1w++yaFsrF98Kgq4mf\nUiQ2JbsoOAxma3uqKkdyyA1WWok1DNucqYNIpKlbeZOBMt9phW6aIHkbj4vsTq0W\n8sc+3OHf7SuMsRuxnFnJlfkLjiXgh9iJ+uqEmpIcRhYYOfiphg12aKWRGnsszmBQ\n4kMlD75qVTaCzJLkN2JDiqPqliPm268eaE2qjUtI2QKBgQD+0IcuGP6l2ye1meV9\n9zQKLd4uUKje2CtKb+W1Xvq3rhxcMqx1liqmltEuDIXsZsMlgYGt8JnQ21AXsPQP\ncmg32EvZulqyvcgI1v0tujTdVGxZ4who0ayz1CjoEaQXuyjFC4Qpaz1yfnPayBJU\nvrpZkB0UDk+7fKocA2gh078u2wKBgQDB/+fRuoKlXUAx3nDUU3VtPBZxPCG86VUY\nNBtIyzdMoeGgrZrlnD2oAqkO/rqhOmOa1Izewvo9uOhSUgE5n+b/C+SCGuaJHWZf\no7NuJOPZwmGMr2ZsdD46Iy/JpgYfJ0R6v3zsLZHiRYbcFk8PazOytvpLXxHxua6J\nEHBZuqxaaQKBgQC/KZWgYaP4rXcW6EOgwqnJ0StTt7NYqvefOl8sN/sDfZ1NFb8H\n4AZTP+XiFAcMmPNh2cx9v3jFlSJ7A4e1ZvEEpEITL5kHaxT8fL0nZwBt4v3+WTJf\n4J0ds9aUc1eVbhVh7gfSQt+wW2lzApGt/gAzXMhT2YC7eQTtSyj956sP7QKBgBvU\n1LMX6MpEeIMvAEzVtFD5f9a647QwXU7dmtR0ovhReQcOINyz73x89Tf7f1bGA6gg\nuhzzJ+dW8a1tqlNUB1WrpRqtNUmSeC9cUs+IZ0/EPS5rs2v3uT2p8p8hPFuXzJE3\ni3puhzFI/DHy2WDC5mXLLllFyFM/ajSrsRKOX0+RAoGBANjXfU5TtK8gwOh4aod/\nsgv1zmLOL/VLrtwZjWQpLLm/rgeR4aGaf8ssX8ZYVbZB7DWJgaHgnOZPfEd7a9qK\nf45mjg/jf17Ao8eDpBkjTt7ZfyCHrpnT72I0zxV+UYkxamxCMPMdlLTpOq1PsSuy\nUpoQptRN28ACf8umFNpc0HNR\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-hjs4t@shopingzone-77ff1.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-18T02:53:35.652Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:53:35.654Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:53:35.654Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:53:35.660Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:53:35.668Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:53:35.681Z] [runtime-status] [6152] Ephemeral server handling GET request 
+[debug] [2020-05-18T02:53:35.694Z] [runtime-status] [6152] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~2s
+[debug] [2020-05-18T02:53:37.903Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:53:37.904Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:53:56.561Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:53:56.561Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:53:56.562Z] Accepted request OPTIONS /shopingzone-77ff1/us-central1/app/api/delete/sAeQUAjWeZ4u1apvRtsx --> app
+[debug] [2020-05-18T02:53:56.562Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:53:56.562Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:53:56.563Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:53:56.566Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:53:56.569Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:53:56.569Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:53:56.573Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:53:56.576Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:53:56.585Z] [runtime-status] [6152] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-18T02:53:56.588Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:53:56.594Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-05-18T02:53:56.594Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-05-18T02:53:56.594Z] Accepted request DELETE /shopingzone-77ff1/us-central1/app/api/delete/sAeQUAjWeZ4u1apvRtsx --> app
+[debug] [2020-05-18T02:53:56.606Z] [worker-pool] addWorker(app) 
+[debug] [2020-05-18T02:53:56.606Z] [worker-pool] Adding worker with key app, total=2 
+[debug] [2020-05-18T02:53:56.606Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:53:56.607Z] [worker-app-79e7117d-f192-4ae2-8761-b2e5cf32edc9]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\3884 
+[debug] [2020-05-18T02:53:56.607Z] [worker-app-79e7117d-f192-4ae2-8761-b2e5cf32edc9]: BUSY 
+[debug] [2020-05-18T02:53:56.608Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:53:56.608Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:53:57.491Z] [runtime-status] [3884] Functions runtime initialized. {"cwd":"D:\\Project\\Proad\\functions","node_version":"10.15.3"} 
+[debug] [2020-05-18T02:53:57.494Z] [runtime-status] [3884] Disabled runtime features: undefined 
+[debug] [2020-05-18T02:53:57.500Z] [runtime-status] [3884] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:57.503Z] [runtime-status] [3884] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:57.516Z] [runtime-status] [3884] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-18T02:53:57.612Z] [runtime-status] [3884] Checked functions.config() {"config":{}} 
+[debug] [2020-05-18T02:53:57.613Z] [runtime-status] [3884] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:57.615Z] [runtime-status] [3884] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:57.616Z] [runtime-status] [3884] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-18T02:53:57.616Z] [runtime-status] [3884] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Project\\Proad\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-05-18T02:53:58.435Z] [runtime-status] [3884] initializeApp(DEFAULT) {"databaseURL":"https://fir-api-9a206..firebaseio.com","storageBucket":"shopingzone-77ff1.appspot.com","projectId":"shopingzone-77ff1","credential":{"implicit":false,"projectId":"shopingzone-77ff1","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBGe5fU6Filvoj\n7HXMHIA5G9qxqBQdEhJS/2+UAcm9niFG5C1NkRto6uAbhQu9JqqH83SCUmzoGfH+\nQ1Zo0U0DdgAfHJLLkYHhU/JoFo+LpjRGbRtMyvZbzkOzvsOdtrFbo7xqr+L0ZBOm\nYC6j+lZXIB449u8/8v+kJ1nVMic1lRVCH3Zqz+oCbtFNl36YL3y2krYK0GJGL8Yw\nZx+IxkiW80gqChro+JxqwjQWKk5qnjdgmpoGDSoP5TJEYIA2l7UeaD+XS8fA+7Ga\nfEReOnR4yU2f7EghxJKGDSy5tHg7I+CbMZkl+nUJ/JEMWQe+JqmY4jEni4Tj1507\n4PKpBzXTAgMBAAECggEAEyUAgpf2hKFGTIB5j1J2DfNqg7mPwPAVPABSLiDdQPzn\n/LDLowiTaJv8uw2+Q7MNLixfbTpBzOMhoF1JuFuj4Id27J63GRKkh1P80QAHnEdO\noHrZvYvTz/dLtAriNwUxYU4C9Krae/NeFV0s0poTrFClXm1w++yaFsrF98Kgq4mf\nUiQ2JbsoOAxma3uqKkdyyA1WWok1DNucqYNIpKlbeZOBMt9phW6aIHkbj4vsTq0W\n8sc+3OHf7SuMsRuxnFnJlfkLjiXgh9iJ+uqEmpIcRhYYOfiphg12aKWRGnsszmBQ\n4kMlD75qVTaCzJLkN2JDiqPqliPm268eaE2qjUtI2QKBgQD+0IcuGP6l2ye1meV9\n9zQKLd4uUKje2CtKb+W1Xvq3rhxcMqx1liqmltEuDIXsZsMlgYGt8JnQ21AXsPQP\ncmg32EvZulqyvcgI1v0tujTdVGxZ4who0ayz1CjoEaQXuyjFC4Qpaz1yfnPayBJU\nvrpZkB0UDk+7fKocA2gh078u2wKBgQDB/+fRuoKlXUAx3nDUU3VtPBZxPCG86VUY\nNBtIyzdMoeGgrZrlnD2oAqkO/rqhOmOa1Izewvo9uOhSUgE5n+b/C+SCGuaJHWZf\no7NuJOPZwmGMr2ZsdD46Iy/JpgYfJ0R6v3zsLZHiRYbcFk8PazOytvpLXxHxua6J\nEHBZuqxaaQKBgQC/KZWgYaP4rXcW6EOgwqnJ0StTt7NYqvefOl8sN/sDfZ1NFb8H\n4AZTP+XiFAcMmPNh2cx9v3jFlSJ7A4e1ZvEEpEITL5kHaxT8fL0nZwBt4v3+WTJf\n4J0ds9aUc1eVbhVh7gfSQt+wW2lzApGt/gAzXMhT2YC7eQTtSyj956sP7QKBgBvU\n1LMX6MpEeIMvAEzVtFD5f9a647QwXU7dmtR0ovhReQcOINyz73x89Tf7f1bGA6gg\nuhzzJ+dW8a1tqlNUB1WrpRqtNUmSeC9cUs+IZ0/EPS5rs2v3uT2p8p8hPFuXzJE3\ni3puhzFI/DHy2WDC5mXLLllFyFM/ajSrsRKOX0+RAoGBANjXfU5TtK8gwOh4aod/\nsgv1zmLOL/VLrtwZjWQpLLm/rgeR4aGaf8ssX8ZYVbZB7DWJgaHgnOZPfEd7a9qK\nf45mjg/jf17Ao8eDpBkjTt7ZfyCHrpnT72I0zxV+UYkxamxCMPMdlLTpOq1PsSuy\nUpoQptRN28ACf8umFNpc0HNR\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-hjs4t@shopingzone-77ff1.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-05-18T02:53:59.020Z] [runtime-status] [3884] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:53:59.022Z] [runtime-status] [3884] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:53:59.022Z] [runtime-status] [3884] Running app in mode HTTPS 
+[debug] [2020-05-18T02:53:59.028Z] [runtime-status] [3884] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\3884 
+[debug] [2020-05-18T02:53:59.033Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:53:59.044Z] [runtime-status] [3884] Ephemeral server handling DELETE request 
+[debug] [2020-05-18T02:53:59.053Z] [runtime-status] [3884] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:00.770Z] [worker-app-79e7117d-f192-4ae2-8761-b2e5cf32edc9]: IDLE 
+[debug] [2020-05-18T02:54:00.770Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:00.793Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:00.793Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:00.793Z] Accepted request GET /shopingzone-77ff1/us-central1/app/api/read --> app
+[debug] [2020-05-18T02:54:00.794Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:00.794Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:00.794Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:00.799Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:00.801Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:00.802Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:00.802Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:00.804Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:00.809Z] [runtime-status] [6152] Ephemeral server handling GET request 
+[debug] [2020-05-18T02:54:00.810Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:01.068Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:01.068Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:10.270Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:10.271Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:10.271Z] Accepted request GET /shopingzone-77ff1/us-central1/app/api/read/eBODaqzzWtasQLctYuCl --> app
+[debug] [2020-05-18T02:54:10.271Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:10.272Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:10.272Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:10.277Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:10.279Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:10.280Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:10.280Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:10.282Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:10.288Z] [runtime-status] [6152] Ephemeral server handling GET request 
+[debug] [2020-05-18T02:54:10.290Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:10.524Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:10.525Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:21.256Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:21.257Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:21.257Z] Accepted request OPTIONS /shopingzone-77ff1/us-central1/app/api/update/eBODaqzzWtasQLctYuCl --> app
+[debug] [2020-05-18T02:54:21.257Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:21.257Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:21.258Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:21.258Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:21.262Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:21.263Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:21.263Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:21.266Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:21.272Z] [runtime-status] [6152] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-18T02:54:21.275Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:21.282Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:21.283Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:21.289Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:21.290Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:21.290Z] Accepted request PUT /shopingzone-77ff1/us-central1/app/api/update/eBODaqzzWtasQLctYuCl --> app
+[debug] [2020-05-18T02:54:21.290Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:21.290Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:21.291Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:21.293Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:21.298Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:21.299Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:21.299Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:21.302Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:21.567Z] [runtime-status] [6152] Ephemeral server handling PUT request 
+[debug] [2020-05-18T02:54:21.571Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:21.827Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:21.828Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:21.904Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:21.904Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:21.904Z] Accepted request GET /shopingzone-77ff1/us-central1/app/api/read --> app
+[debug] [2020-05-18T02:54:21.904Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:21.905Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:21.905Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:21.908Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:21.911Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:21.911Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:21.912Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:21.914Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:21.920Z] [runtime-status] [6152] Ephemeral server handling GET request 
+[debug] [2020-05-18T02:54:21.920Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:22.163Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:22.163Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:50.103Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:50.103Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:50.103Z] Accepted request OPTIONS /shopingzone-77ff1/us-central1/app/api/create --> app
+[debug] [2020-05-18T02:54:50.103Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:50.104Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:50.104Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:50.104Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:50.106Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:50.107Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:50.107Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:50.108Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:50.117Z] [runtime-status] [6152] Ephemeral server handling OPTIONS request 
+[debug] [2020-05-18T02:54:50.117Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:50.121Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:50.121Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:50.125Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:50.125Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:50.126Z] Accepted request POST /shopingzone-77ff1/us-central1/app/api/create --> app
+[debug] [2020-05-18T02:54:50.126Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:50.126Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:50.126Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:50.134Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:50.142Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:50.143Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:50.143Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:50.144Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:50.154Z] [runtime-status] [6152] Ephemeral server handling POST request 
+[debug] [2020-05-18T02:54:50.154Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:50.461Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:50.461Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-05-18T02:54:58.258Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-05-18T02:54:58.258Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-05-18T02:54:58.258Z] Accepted request GET /shopingzone-77ff1/us-central1/app/api/read --> app
+[debug] [2020-05-18T02:54:58.258Z] [worker-pool] submitWork(triggerId=app) 
+[debug] [2020-05-18T02:54:58.259Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: Assigning socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:58.259Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: BUSY 
+[debug] [2020-05-18T02:54:58.259Z] [runtime-status] [6152] Trigger "app" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-05-18T02:54:58.261Z] [runtime-status] [6152] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"} 
+[debug] [2020-05-18T02:54:58.262Z] [runtime-status] [6152] Running app in mode HTTPS 
+[debug] [2020-05-18T02:54:58.262Z] [runtime-status] [6152] Attempting to listen to socketPath: \\?\pipe\D:\Project\Proad\functions\6152 
+[debug] [2020-05-18T02:54:58.263Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-05-18T02:54:58.266Z] [runtime-status] [6152] Ephemeral server handling GET request 
+[debug] [2020-05-18T02:54:58.267Z] [runtime-status] [6152] Ephemeral server survived. 
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-05-18T02:54:58.511Z] [worker-app-7663549a-8b46-4125-a4b8-2cdc0e8411c1]: IDLE 
+[debug] [2020-05-18T02:54:58.511Z] [work-queue] {"queueLength":0,"workRunningCount":0}

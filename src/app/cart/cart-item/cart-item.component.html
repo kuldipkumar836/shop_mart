@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-actions >
+<img mat-card-sm-image src="assets/img/img_2.jpg" style="display: block;height: 100px; width: 100px;" >
+<mat-card-content>Iphone</mat-card-content>
+<span>Quantity:</span>
+<button (click) = "increaseItem()"><mat-icon svgIcon="add-24px" ></mat-icon></button>
+ <input type="text" size = "2" value="{{quantity}}" readonly>
+<button (click) = "decreaseItem()"><mat-icon svgIcon="remove-24px" ></mat-icon></button>
+<mat-card-footer>price {{balence}}</mat-card-footer>
+</mat-card-actions>
+<div><button  mat-button (click) ="removeItemFormCart()">Remove From Cart</button></div>
+</mat-card>
+<div><button  mat-button [routerLink]="['checkout']" >checkout</button></div>

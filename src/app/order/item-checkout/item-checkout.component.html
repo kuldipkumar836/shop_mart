@@ -1,0 +1,51 @@
+<form #address="ngForm" (submit)="addressInfo(address)">
+  <mat-form-field>
+    <input matInput type="text" name="name" placeholder="Enter Your Name " ngModel required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" name="Mob no" placeholder="Enter Your Mobile No. " ngModel required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Select State</mat-label>
+    <mat-select [(ngModel)]="state" name = "state">
+    <mat-option *ngFor ="let state of states" [value]="state"> {{state.stateName}}</mat-option>
+  </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Select District</mat-label>
+    <mat-select [(ngModel)]="district" name = "district">
+    <mat-option *ngFor ="let district of districts" [value]="district"> {{district.districtName}}</mat-option>
+  </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" name="pincode" placeholder="Enter Your Pincode " ngModel required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" name="landmark" placeholder="Enter  Nearest LandMark" ngModel required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="house no." placeholder="Enter Your House no./ Gully No." ngModel required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="local" placeholder="Enter building./ Mohalla." ngModel required>
+  </mat-form-field>
+  <button mat-button type="submit">Save Address</button>
+</form>
+<!--
+<mat-form-field>
+  <a href=""></a>
+</mat-form-field>
+<form #cardform="ngForm" (submit)="cardDeatail(cardform)">
+  <mat-form-field>
+    <input matInput name="name" type="text" placeholder="Card Holder's Name " ngModel>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="card no" type="password" placeholder="Enter Card Number" ngModel>
+    <input matInput type="text" name="expiry date" placeholder=" Enter Expiry Dade " ngModel>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" name="CVC no" maxlength="3" placeholder="Enter CVC Number" ngModel>
+  </mat-form-field>
+  <button mat-button type="submit">Save Address</button>
+</form>-->

@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<input type = "file" (change) = "filePicker($event)">
+<div>
+<img src = '{{imagePreview}}' alt = "">
+</div>
+<button mat-raised-button type = "submit">Save</button>
+</form >
