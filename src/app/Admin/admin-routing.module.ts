@@ -3,12 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddItemComponent } from './add-item/add-item.component';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { FileComponent } from './file/file.component';
-import { HeaderComponent } from './header/header.component';
+import { ActionBarComponent } from './action-bar/action-bar.component';
 const routes: Routes = [
-
-  { path: 'header', component: HeaderComponent },
+ { path: 'header', component: ActionBarComponent },
   { path: 'itemList', component: ItemsListComponent },
-  { path: 'banner', component: FileComponent },
+   { path: 'banner', component: FileComponent },
   { path: 'addItem', component: AddItemComponent },
   { path: 'editItem/:itemId', component: AddItemComponent },
 ];

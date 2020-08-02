@@ -5,3 +5,9 @@ mat-form-field {
 mat-spinner {
   margin: auto;
 }
+.card{
+  border: none;
+}
+a{
+  color: black;
+}

@@ -1,30 +1,9 @@
-<carousel class = 'slider' >
+<carousel class = 'slider'  *ngFor ='let banner of banners' >
   <slide>
-    <img src="assets/img/img_1.jpg" alt="first slide" >
+    <img [src]="banner.imageUrl" alt="first slide" >
     <div class="carousel-caption d-none d-md-block">
       <h3>First slide label</h3>
       <p>Nulla vitae elit libero, </p>
-    </div>
-  </slide>
-  <slide>
-    <img src="assets/img/img_2.jpg" alt="second slide" style="display: block;height: 300px; width: 100%;">
-    <div class="carousel-caption d-none d-md-block">
-      <h3>Second slide </h3>
-      <p>Lorem ipsum dolor sit amet,.</p>
-    </div>
-  </slide>
-  <slide>
-    <img src="assets/img/img_3.jpg" alt="third slide" style="display: block;height: 300px; width: 100%;">
-    <div class="carousel-caption d-none d-md-block">
-      <h3>Third slide</h3>
-      <p>Praesent commodo cursus magna, .</p>
-    </div>
-  </slide>
-  <slide>
-    <img src="assets/img/img_4.jpg" alt="third slide" style="display: block;height: 300px; width: 100%;">
-    <div class="carousel-caption d-none d-md-block">
-      <h3>Third slide</h3>
-      <p>Praesent commodo cursus magna, .</p>
     </div>
   </slide>
 </carousel>

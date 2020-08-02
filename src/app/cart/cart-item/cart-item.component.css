@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.card{
+    border: none;
+}
+img{
+    max-width: 300px;
+    max-height: 300px;
+}

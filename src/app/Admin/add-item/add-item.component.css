@@ -5,6 +5,9 @@ mat-form-field {
     height: 5rem;
     margin: 1rem 0;
   }
+  .card{
+    border: none;
+  }
   
   .image-preview img {
     height: 100%;

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MatIconRegistry } from '@angular/material';
-import { DomSanitizer } from '@angular/platform-browser';
 import { CartService } from 'src/app/services/cart.service';
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'src/app/Admin/product.model';
+import { ProductShareingService } from 'src/app/services/product-shareing.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-item',
@@ -12,23 +14,30 @@ export class CartItemComponent implements OnInit {
   public quantity: number;
   public balence: number;
   public cartBadge: number;
-
-  constructor( private iconRegistry: MatIconRegistry, 
-               private sanitizer: DomSanitizer,
-               private cartService: CartService
+  id: string;
+  items: Product[]
+  constructor( 
+              private itemService: ProductService,
+              private itemId: ProductShareingService,
+              private cartService: CartService,
+              private router: Router,
                 ) {
-                  iconRegistry.addSvgIcon(
-                    'add-24px',
-                    sanitizer.bypassSecurityTrustResourceUrl('assets/icons/add-24px.svg'));
-                  iconRegistry.addSvgIcon(
-                    'remove-24px',
-                    sanitizer.bypassSecurityTrustResourceUrl('assets/icons/remove-24px.svg')); 
                }
 
   ngOnInit() {
     this.cartService.currentItemQuantity.subscribe(quantity => this.quantity = quantity);
     this.cartService.currentItemPrice.subscribe(balence => this.balence = balence);
     this.cartService.currentItemValue.subscribe(cartBadge => this.cartBadge = cartBadge);
+    this.itemId.currentItemId.subscribe(productid => this.id = productid);
+    console.log(this.id);
+    this.itemService.getItems().subscribe(a=>{
+      this.items = a.map(item=>{
+        return {
+          id: item.payload.doc.id,
+            ...item.payload.doc.data()
+        }as Product
+      })
+    })
   }
   increaseItem(){
     this.quantity++;
@@ -45,11 +54,16 @@ export class CartItemComponent implements OnInit {
     if(this.cartBadge >=1){
       this.cartBadge--;
     }
+  
+  //  this.cartService.removeFromCart()
     this.cartService.cartDecrement(this.cartBadge);
   }
-
   checkout(){
-    
+    this.router.navigateByUrl('/checkout/order');
+  }
+  product_detail(){
+    this.router.navigateByUrl('/product/itemInfo');
+
   }
 
 

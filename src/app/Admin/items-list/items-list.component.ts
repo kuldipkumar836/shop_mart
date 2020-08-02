@@ -12,20 +12,31 @@ export class ItemsListComponent implements OnInit {
    constructor( private itemServise: ProductService) { }
 
   ngOnInit() {
-     this.isLoading = true;
-    this.itemServise.getItems().subscribe((item: Product[]) =>
-    {
-      this.items = item;
-      this.isLoading = false;
-    });
+      this.isLoading = true;
+    this.itemServise.getItems().subscribe(a=>{
+    this.items = a.map(item=>{
+      return {
+        id: item.payload.doc.id,
+          ...item.payload.doc.data()
+      }as Product
+    })
+    this.isLoading = false;
+  })
+  
+  }
+  updateItem(){
+    
   }
   onDelete(itemId: string){
-    this.itemServise.deleteItem(itemId).subscribe(() => {
-      this.itemServise.getItems().subscribe((item: Product[]) =>
-      {
-        this.items = item;
-       
-      });
+    this.itemServise.deleteItem(itemId).then(() => {
+      this.itemServise.getItems().subscribe(a=>{
+    this.items = a.map(item=>{
+      return {
+        id: item.payload.doc.id,
+          ...item.payload.doc.data()
+      }as Product
+    })
+  });
     })
   }
 

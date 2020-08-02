@@ -1,49 +1,32 @@
 <app-banner></app-banner>
-<mat-grid-list cols="6" rowHeight="2:2">
-  <mat-grid-tile>
-<a routerLink = "/product/itemInfo">
-  <mat-card>
+<div class="container-fluid">
+  <div  class="row mt-2 p-2">
+    <div class="  col-md-12 d-flex col-lg-12 justify-content-between ">
+      <div  class="row gx-3  ">
+        <!--Product in one View-->
+        <div *ngFor ='let item of items' class="col-md-2 col-lg-2 col-6  shadow  " (click) = "product_detail(item.id)">
+          <!--image div-->
+          <div class="card  ">
+            <img [src]="item.imageUrl" class="thumbnail-image"onerror ="this.src='assets/img/default.png'" alt="product_img">
+          </div>
+          <p class="mb-1">{{item.name}}</p>
+          <p class="mb-1">{{item.price}}</p>
+        </div>
+      </div>
+    </div>  
+  </div>    
+</div>
+<!--<mat-grid-list cols="6" rowHeight="2:2" >
+  <mat-grid-tile *ngFor ='let item of items'>
+
+    <a routerLink = "/product/itemInfo">
+  <mat-card (click) = "product_detail(item.id)">
     <mat-card-actions >
-  <img mat-card-sm-image src="assets/img/img_2.jpg" style="display: block;height: 100px; width: 100px;" >
-  <mat-card-content>Iphone</mat-card-content>
-  <mat-card-footer> price 65000</mat-card-footer>
+  <img mat-card-sm-image class = "thumbnail" [src] = "item.image" style="display: block;height: 100px; width: 100px;" >
+  <mat-card-content>{{item.name}}</mat-card-content>
+  <mat-card-footer> price {{item.price}}</mat-card-footer>
 </mat-card-actions>
 </mat-card>
 </a>
 </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-    <img mat-card-sm-image src="assets/img/img_4.jpg" style="display: block;height: 100px; width: 100px;" >
-    <mat-card-content>Iphone</mat-card-content>
-    <mat-card-footer> price 65000</mat-card-footer>
-  </mat-card>
-</mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-    <img mat-card-sm-image src="assets/img/img_3.jpg" style="display: block;height: 100px; width: 100px;" >
-    <mat-card-content>Iphone</mat-card-content>
-    <mat-card-footer> price 65000</mat-card-footer>
-  </mat-card>
-</mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-    <img mat-card-sm-image src="assets/img/img_2.jpg" style="display: block;height: 100px; width: 100px;" >
-    <mat-card-content>Iphone</mat-card-content>
-    <mat-card-footer> price 65000</mat-card-footer>
-  </mat-card>
-</mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-    <img mat-card-sm-image src="assets/img/img_2.jpg" style="display: block;height: 100px; width: 100px;" >
-    <mat-card-content>Iphone</mat-card-content>
-    <mat-card-footer> price 65000</mat-card-footer>
-  </mat-card>
-</mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-    <img mat-card-sm-image src="assets/img/img_2.jpg" style="display: block;height: 100px; width: 100px;" >
-    <mat-card-content>Iphone</mat-card-content>
-    <mat-card-footer> price 65000</mat-card-footer>
-  </mat-card>
-</mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list>-->

@@ -1,11 +1,39 @@
-<mat-card>
-  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" >
-    <mat-form-field>
-      <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
-    </mat-form-field>
-    <mat-form-field>
-      <input type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
-    </mat-form-field>
-    <button mat-raised-button color="accent" type="submit" >Signup</button>
-  </form>
-</mat-card>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 mt-3 col-11 mx-auto shadow">
+      <div class="row ">
+        <div class="col-md-12 co-11 justify-content-center bg-light align-items-center">
+          <div class="card p-4 my-3">
+            <h2 class="py-4 font-weight-bold">New User Registration</h2>
+            <div class="signUp">
+              <form (submit)="onSignup(signupForm)" #signupForm="ngForm" >
+                <div class="form-group col-6 justify-content-between ">
+                  <label for="email">Email</label>
+                  <input  name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+                </div>
+                <div class="form-group col-6 justify-content-between">
+                  <label for="password">Password</label>
+                  <input  type="password" name="password" ngModel  placeholder="Password" #passwordInput="ngModel" required>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-6 justify-content-between">
+                    <button class=" mb-2 btn btn-primary " type="submit" >Signup</button>
+                    <p><a  [routerLink] = "['/auth/login']" >Already a user click here</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="auth-provider col-11 ">
+            <div class="mb-3 google">
+              <button class=" btn bg-dark btn-primary btn-block "><i class="fa fa-google"></i> Connect with Google </button>
+            </div>
+            <div class=" mb-3 facefook">
+              <button class="btn bg-dark btn-primary btn-block"><i class="fa fa-facebook"></i> Connect with Facefook </button>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

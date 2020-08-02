@@ -1,4 +1,5 @@
 export interface AuthData {
+  uid: string;
   email: string;
-  password: string;
+  photoURL?: string;
 }

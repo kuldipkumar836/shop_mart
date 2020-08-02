@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Product } from '../Admin/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +17,19 @@ export class CartService {
   currentItemPrice = this.itemPrice.asObservable();
   currentItemQuantity = this.itemQuantity.asObservable();
 
-  constructor() { }
+  constructor(private afs:AngularFirestore,) { }
   cartIncrement(value: number){
     this.itemValue.next(value);
   }
+  saveInCart(cartData: string){
+    return this.afs.collection('cart').add(cartData);
+}
+  //removeFromCart(itemId: string){
+ //   return this.afs.doc(`cart/${itemId}`).delete();
+//}
+  getCartProduct(){
+       return this.afs.collection('cart').snapshotChanges();
+     }
   cartDecrement(value: number){
     this.itemValue.next(value);
   }

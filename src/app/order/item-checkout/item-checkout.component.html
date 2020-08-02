@@ -1,51 +1,45 @@
-<form #address="ngForm" (submit)="addressInfo(address)">
-  <mat-form-field>
-    <input matInput type="text" name="name" placeholder="Enter Your Name " ngModel required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="text" name="Mob no" placeholder="Enter Your Mobile No. " ngModel required>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Select State</mat-label>
-    <mat-select [(ngModel)]="state" name = "state">
-    <mat-option *ngFor ="let state of states" [value]="state"> {{state.stateName}}</mat-option>
-  </mat-select>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Select District</mat-label>
-    <mat-select [(ngModel)]="district" name = "district">
-    <mat-option *ngFor ="let district of districts" [value]="district"> {{district.districtName}}</mat-option>
-  </mat-select>
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput type="text" name="pincode" placeholder="Enter Your Pincode " ngModel required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="text" name="landmark" placeholder="Enter  Nearest LandMark" ngModel required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput name="house no." placeholder="Enter Your House no./ Gully No." ngModel required>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput name="local" placeholder="Enter building./ Mohalla." ngModel required>
-  </mat-form-field>
-  <button mat-button type="submit">Save Address</button>
-</form>
-<!--
-<mat-form-field>
-  <a href=""></a>
-</mat-form-field>
-<form #cardform="ngForm" (submit)="cardDeatail(cardform)">
-  <mat-form-field>
-    <input matInput name="name" type="text" placeholder="Card Holder's Name " ngModel>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput name="card no" type="password" placeholder="Enter Card Number" ngModel>
-    <input matInput type="text" name="expiry date" placeholder=" Enter Expiry Dade " ngModel>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="password" name="CVC no" maxlength="3" placeholder="Enter CVC Number" ngModel>
-  </mat-form-field>
-  <button mat-button type="submit">Save Address</button>
-</form>-->
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-md-10 col-11 mx-auto  justify-content center">
+      <div class="row gx-3">
+      <!--address div-->
+      <div class="col-md-6   col-11 shadow">
+        <form [formGroup] = "form" (ngSubmit) = "addressinfo()">
+          <div class="col-12 justify-conten-between ">
+            <label >Name</label>
+          <input class=" form-control" type="text" formControlName="name" placeholder = "Enete Your Name" ngModel required>
+          </div>
+          <div class="col-12 justify-conten-between">
+            <label >Mobile No.</label>
+            <input class="form-control" type="text" formControlName="mobileNo" placeholder = "Enete Your Mobile no." ngModel required>
+          </div>
+          <div class="col-12 justify-conten-between">
+            <label >Pincode</label>
+            <input class="form-control" type="text" formControlName="pincode" placeholder = "Enete Your pincode" ngModel required>
+          </div>
+          <div class="col-12 justify-conten-between">
+            <label >Nearest Landmark</label>
+            <input class="form-control" type="text" formControlName="landmark" placeholder = "Enete Your Nearest Landmark" ngModel required>
+          </div>
+          <div class="col-12 justify-conten-between">
+            <label >Galli Name / Mohalla Name.</label>
+            <input class="form-control" type="text" formControlName="galli" placeholder = "Enete Your Galli Name / Mohalla Name." ngModel required>
+          </div>
+          <div class="col-12 mt-3 justify-conten-between">
+            <button class="btn mb-3 btn-primary" type="submit">Save Address</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Payment div-->
+      <div class="col-md-6 col-11 shadow ">
+        <form [formGroup] = 'form'(ngSubmit) = "paymentMethode()">
+          <div class="col-12 justify-conten-between ">
+            <label >Select Payment Mode</label>
+          <input class="form-control" type="radio" formControlName="payMpde" ngModel required>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

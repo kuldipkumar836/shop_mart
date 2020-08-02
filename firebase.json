@@ -9,7 +9,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "dist/Proad",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileService {
-  BACKEND_URL = 'http://localhost:5001/shopingzone-77ff1/us-central1/app/'
-  constructor( private http: HttpClient) { }
+  constructor( private afs:AngularFirestore ) { }
 
-    saveFile(image: File){
-      console.log(image);
-      
-    return this.http
-      .post<{ }>(
-        this.BACKEND_URL + 'api/file',
-        image
-      )};
+ getImages(){
+       return this.afs.collection('banners').snapshotChanges();
+     }
+  
 }
+

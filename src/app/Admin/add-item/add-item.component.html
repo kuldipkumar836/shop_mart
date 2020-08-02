@@ -1,24 +1,88 @@
-<mat-spinner *ngIf = isLoading></mat-spinner>
-<form [formGroup] = 'form' (ngSubmit)="productSave(form)" >
-  <!--<mat-form-field>
+<div class="container-fluid">
+  <div class="row my-3 px-5">
+    <h3 class="mb-2"> Add New Product </h3>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-10 col-11 col-lg-12 mx-auto shadow">
+      <div class="row p-2">
+        <!--image div-->
+        <div class="col-md-4 col-lg-4 col-11 shadow">
+          <div class="card mb-2">
+            <img [src]="imagePreview" class="thumbnail-image" onerror ="this.src='assets/img/default.png'" alt="product_img">
+          </div>
+          <span class="mt-3"><button class="btn btn-lg btn-success" (click)="filePicker.click()">Upload Product Image</button></span>
+          <div *ngIf="uploadPercent | async as pct">
+            <progress [value]="pct" max="100"></progress>
+            {{ pct | number }}%
+          </div>
+        </div>
+      
+        <!--product info form -->
+        <div class="col-md-6 col-lg-8 mt-3 col-11 mx-auto shadow">
+          <form [formGroup] = 'form' (ngSubmit) = 'productSave()'>
+            <div class="form-group d-flex justify-content-between col-8">
+              <label for="name">Product Title</label>
+              <input type="text" formControlName ="name" placeholder="Product Name"  required >
+            </div>
+            <div class="form-group d-flex justify-content-between  col-8">
+              <label for="name">Product Price</label>
+              <input type="text" formControlName ="price" placeholder="Product Price"  required >
+            </div>
+            <div class="form-group d-flex justify-content-between  col-8">
+              <label for="name">Product Quantity</label>
+              <input type="text" formControlName ="quantity" placeholder="Product Quantity"  required >
+            </div>
+            <div class="form-group d-flex justify-content-between  col-8">
+              <label for="name">Product Specification</label>
+              <input type="text" formControlName ="specification" placeholder="Product specification"  required >
+            </div>
+            <div class="form-group d-flex justify-content-between  col-8">
+              <input type="file" [hidden]='true' #filePicker  (change)="onImagePicked($event)" required>
+            </div>
+            <div class="form-group d-flex justify-content-between  col-8">
+              <label for="name">Product Description</label>
+              <textarea formControlName ="description" placeholder="Product description" cols="30" rows="5"required></textarea>
+            </div>
+            <div class="form-group d-flex justify-content-between  col-8">
+            <button class="btn btn-success" type="submit" >Save</button>
+            <button class="btn btn-warning" (click) = "cancel()" >Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<mat-spinner *ngIf = isLoading></mat-spinner>
+<form [formGroup] = 'form' (ngSubmit)="productSave()" >
+  <mat-form-field>
     <mat-label>Select Category</mat-label>
     <mat-select [(ngModel)]="category" name = "category">
     <mat-option *ngFor =" let category of categories" [value]="category.name"> {{category.name}}</mat-option>
   </mat-select>
   </mat-form-field>
-  <p>selected{{category}}</p>-->
+  <p>selected{{category}}</p>
   <mat-form-field>
     <input matInput type="text" formControlName ="name" placeholder="Product Name"  required>
      <mat-error *ngIf="form.get('name').invalid">Please enter Product name.</mat-error>
   </mat-form-field>
- <!--- <div>
+ <div>
     <label> Upload product picture</label>
     <button mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
     <input type="file" [hidden]='true' #filePicker  (change)="onImagePicked($event)">
   </div>
-  <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
-    <img [src]="imagePreview" [alt]="form.value.title">
-  </div>-->
+  <div *ngIf="downloadURL | async; let imgUrl" class="alert alert-info" role="alert">
+    <img [src] = "imgUrl" alt = "" style = "height: 200px; width:200px">
+    <input type="text" class="form-control" [value]="imgUrl">
+  </div>
+  <div *ngIf="uploadPercent | async as pct">
+  <progress [value]="pct" max="100"></progress>
+  {{ pct | number }}%
+</div>
+  <mat-form-field>
+    <input matInput type="text" formControlName = "imageUrl" placeholder="Pest imageUrl here" required>
+    <mat-error *ngIf = "form.get('imageUrl').invalid">Please Enter the imageUrl here  </mat-error>
+    </mat-form-field>
   <mat-form-field>
     <input matInput type="text" formControlName = "price" placeholder="Price" required>
     <mat-error *ngIf = "form.get('price').invalid">Please Enter the Product Price </mat-error>
@@ -39,4 +103,4 @@
     </textarea></mat-form-field>
   <button mat-raised-button type="submit"[disabled]="!form.valid" >Add Product </button>
   <button mat-button (click) = 'cancel()' > Cancel</button>
-</form>
+</form>-->

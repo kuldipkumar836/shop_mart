@@ -3,8 +3,9 @@ import { NgForm, FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../product.model';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
-
+import { AngularFireStorage } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
+import { finalize } from 'rxjs/operators';
  export interface Category{
     value: string;
     name: string;
@@ -24,9 +25,12 @@ export class AddItemComponent implements OnInit {
   file: File;
   itemId: string;
   mode: string;
+    uploadPercent: Observable<number>;
+  downloadURL: Observable<string>;
   constructor( public itemService: ProductService,
                 public route: ActivatedRoute,
-                public router: Router
+                public router: Router,
+                private storage:AngularFireStorage
               ) { }
 
   ngOnInit() {
@@ -34,13 +38,13 @@ export class AddItemComponent implements OnInit {
       name: new FormControl(null, { validators:[]}),
       price: new FormControl(null, { validators:[]}),
       quantity: new FormControl(null, { validators:[]}),
-     // image: new FormControl(null, { validators:[]}),
+      imageUrl: new FormControl(null, { validators:[]}),
       specification: new FormControl(null, { validators:[]}),
       description: new FormControl(null, { validators:[]}),
     })
 
-    this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      if (paramMap.has("itemId")) {
+    this.route.paramMap.subscribe((paramMap: ParamMap) => {});
+      /*if (paramMap.has("itemId")) {
         this.mode = "editItem";
         this.itemId = paramMap.get("itemId");
         this.itemService.getItem(this.itemId).subscribe((itemData:Product[]) => {
@@ -64,18 +68,24 @@ export class AddItemComponent implements OnInit {
         this.mode = "addItem";
         this.itemId = null;
       }
-    });
+    });*/
   }
 
-  onImagePicked(event: Event) {
-      const file = (event.target as HTMLInputElement).files[0];
-      this.form.patchValue({ image: file });
-      this.form.get('image').updateValueAndValidity();
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.imagePreview = reader.result as string;
-      };
-      reader.readAsDataURL(file);
+  onImagePicked(event) {
+        const path = `products/${Math.random().toString(36).substring(2)}`;
+    const file = event.target.files[0];
+    const filePath = path;
+    const fileRef = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+
+    // observe percentage changes
+    this.uploadPercent = task.percentageChanges();
+    // get notified when the download URL is available
+    task.snapshotChanges().pipe(
+        finalize(() => this.downloadURL = fileRef.getDownloadURL() )
+
+     )
+    .subscribe()
   }
     category: string;
     categories: Category[] = [
@@ -92,16 +102,27 @@ export class AddItemComponent implements OnInit {
     if(this.form.invalid){
       return;
     }
+    this.downloadURL.subscribe(data =>{
+      this.imagePreview = data;
+      console.log(this.imagePreview);
+      
+    });
+    this.form.patchValue({imageUrl: this.imagePreview});
+    this.form.get('imageUrl').updateValueAndValidity();
     const data = Object.assign({}, this.form.value); 
-    if (this.mode === 'addItem') {
-      this.itemService.saveItem(data).subscribe( );
+    console.log(data);
+    
+     this.itemService.saveItem(data).then(data =>{
+      });
+    /*if (this.mode === 'addItem') {
+     
     }
     else{
       this.itemService.updateItem(this.itemId, data ).subscribe(res =>{
         this.router.navigate(["/admin/itemList"]);
       } );
     
-    }
+    }*/
    this.form.reset();
   }
 

@@ -14,11 +14,11 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(public authService: AuthService) {}
 
   ngOnInit() {
-    this.authStatusSub = this.authService.getAuthStatusListener().subscribe(
+   /* this.authStatusSub = this.authService.getAuthStatusListener().subscribe(
       authStatus => {
         this.isLoading = false;
-      }
-    );
+      });
+   */
   }
 
   onLogin(form: NgForm) {
@@ -26,10 +26,12 @@ export class LoginComponent implements OnInit, OnDestroy {
       return;
     }
     this.isLoading = true;
-    this.authService.login(form.value.email, form.value.password);
+    console.log(form.value.email, form.value.password);
+    
+    this.authService.loginUser(form.value.email, form.value.password);
   }
 
   ngOnDestroy() {
-    this.authStatusSub.unsubscribe();
+   // this.authStatusSub.unsubscribe();
   }
 }

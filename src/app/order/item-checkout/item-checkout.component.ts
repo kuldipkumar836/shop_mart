@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from "@angular/forms";
+import { NgForm, FormGroup, FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-item-checkout',
@@ -7,15 +7,32 @@ import { NgForm } from "@angular/forms";
   styleUrls: ['./item-checkout.component.css']
 })
 export class ItemCheckoutComponent implements OnInit {
-
+  form: FormGroup;
  state: string;
  district: string;
  districts: any[] = [];
 
 
-  constructor(  ) { }
+  constructor(  ) {
+    
+   }
 
   ngOnInit() {
+    this.form = new FormGroup({
+      name: new FormControl(null, {validators:[]}),
+      mobileNo: new FormControl(null, {validators:[]}),
+      pincode: new FormControl(null, {validators:[]}),
+      galli: new FormControl(null, {validators:[]}),
+      landmark: new FormControl(null, {validators:[]}),
+    });
+  }
+  paymentMethode(){
+    console.log(this.form.value);
+
+  }
+  addressinfo(){
+    console.log(this.form.value);
+    
   }
   states: any[] = [
     {

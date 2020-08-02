@@ -1,7 +1,54 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-<input type = "file" (change) = "filePicker($event)">
-<div>
-<img src = '{{imagePreview}}' alt = "">
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-md-12 col-lg-12 col-11 mx-auto">
+      <div class="row g-3">
+        <div class="col-md-7 col-11 col-lg-7">
+          <div class="row">
+            <h2 class="m-2 px-5">Uplaod Banners</h2>
+            <div class="col-11">
+          <div class="card">
+            <img src="assets/img/img_3.jpg" alt="product_img" class="img-fluid">
+          </div>
+          <button class="btn mt-3 btn-success" (click) = 'file.click()' >Upload image</button>
+          </div>
+          </div>
+          <div class="row">
+            <div *ngIf="uploadPercent | async as pct">
+              <progress [value]="pct" max="100"></progress>
+              {{ pct | number }}%
+            </div>
+            <div class="col-11">
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <input [hidden]='true'  type = "file" #file (change) = "filePicker($event)">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-11">
+          <h2 class="m-2 px-5">Uplaoded Banners</h2>
+          <div class="card">
+            <img src="assets/img/img_3.jpg" alt="product_img" class="img-fluid">
+          </div>
+          <div class="col-6 mt-3 d-flex justify-content-between">
+            <button class="btn btn-info" (click)="updateFile()">Edit</button>
+            <button class="btn btn-danger" (click)="deleteFile()">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!--<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<input  type = "file" #file (change) = "filePicker($event)">
+<div *ngIf="downloadURL | async; let imgUrl" class="alert alert-info" role="alert">
+    <input type="text" class="form-control" [value]="imgUrl">
+    <img [src] = "imgUrl" alt = "">
+</div>
+
+<button class="btn btn-primary" (click) = "uploadFile()">UploadFile</button>
+<div>
+    <input type = "text" formControlName = "imageUrl">
+</div>
+
 <button mat-raised-button type = "submit">Save</button>
-</form >
+</form >-->
