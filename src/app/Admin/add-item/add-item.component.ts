@@ -116,13 +116,12 @@ export class AddItemComponent implements OnInit {
     console.log(data);
     this.downloadURL.subscribe(data => {
       this.imageUrl = data;
-      console.log(this.imageUrl);
-      
+     this.form.patchValue({ imageUrl: this.imageUrl });
+      this.form.get('imageUrl').updateValueAndValidity();      
     });
      
     if (this.mode === 'addItem') {
-      this.form.patchValue({ imageUrl: this.imageUrl });
-      this.form.get('imageUrl').updateValueAndValidity();
+ 
       this.itemService.saveItem(data).then(data => {
       });
       this.imageUrl = null;
