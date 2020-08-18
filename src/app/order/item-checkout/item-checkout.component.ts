@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl } from "@angular/forms";
+import { BillingService } from 'src/app/order/billing.service';
+import { Cart } from 'src/app/cart/cart.model';
+import { CartService } from 'src/app/services/cart.service';
+import { AuthService } from 'src/app/auth/auth.service';
+
 
 @Component({
   selector: 'app-item-checkout',
@@ -9,11 +14,17 @@ import { NgForm, FormGroup, FormControl } from "@angular/forms";
 export class ItemCheckoutComponent implements OnInit {
   form: FormGroup;
  state: string;
+ userid: string;
  district: string;
+ items: Cart[];
  districts: any[] = [];
 
 
-  constructor(  ) {
+  constructor( 
+            private bill_Servive: BillingService,
+            private cartService: CartService,
+            private authService: AuthService,
+   ) {
     
    }
 
@@ -25,14 +36,24 @@ export class ItemCheckoutComponent implements OnInit {
       galli: new FormControl(null, {validators:[]}),
       landmark: new FormControl(null, {validators:[]}),
     });
+    this.userid = this.authService.getUserId();
+    //get Product which buy
+           this.cartService.getCartProduct(this.userid).subscribe(act =>{
+               this.items = act.map(item=>{
+      return {
+                id: item.payload.doc.id,
+          ...item.payload.doc.data()
+      } as Cart
+    });
+    });
   }
   paymentMethode(){
     console.log(this.form.value);
-
   }
   addressinfo(){
-    console.log(this.form.value);
-    
+    const data = Object.assign({}, this.form.value);
+    this.bill_Servive.saveOrder(data).then();
+    this.form.reset();
   }
   states: any[] = [
     {

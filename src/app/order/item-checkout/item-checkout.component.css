@@ -2,6 +2,10 @@
   margin-top: 8px;
 }
 
- mat-form-field {
+mat-form-field {
   margin-top: 16px;
+}
+img{
+    max-width: 200px;
+    max-height: 100px;
 }

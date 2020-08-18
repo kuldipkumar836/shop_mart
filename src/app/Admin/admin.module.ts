@@ -8,6 +8,7 @@ import { ItemsListComponent } from './items-list/items-list.component';
 import { FileComponent } from './file/file.component';
 import { ActionBarComponent } from './action-bar/action-bar.component';
 
+
 @NgModule({
   declarations: [
    AddItemComponent,

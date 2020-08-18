@@ -4,6 +4,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { FileComponent } from './file/file.component';
 import { ActionBarComponent } from './action-bar/action-bar.component';
+import { AuthGuard } from '../shared/auth.guard';
 const routes: Routes = [
  { path: 'header', component: ActionBarComponent },
   { path: 'itemList', component: ItemsListComponent },

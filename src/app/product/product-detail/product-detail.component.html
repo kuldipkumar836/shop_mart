@@ -1,84 +1,85 @@
 <div class="container-fluid">
-  <div class = "row mt-2">
-    <div class = "col-md-11 col-lg-11 col-11 mx-auto ">
-      <div *ngFor = 'let item of items' class = "row ">
-        <div class = "col-md-5 col-lg-5 col-11 p-2 ">
-          <div class="card">
-            <img [src]="item.imageUrl" alt="" class="img-fluid">
-          </div>
-        </div>
-        <!--product-info -->
-        <div class = "col-md-6 col-lg-6 col-11 p-2">
-          <div class = "row">
-            <div class="col-11">
-            <h2 class="mb-2">{{item.name}}</h2>
-            <p class="mb-2" >Specification: {{item.specification}}</p>
-            <p class="mb-2">Description: {{item.description}}</p>
-            <p class="mb-2">{{item.price}}</p>
-          </div>
-            <div class="action col-6 d-flex justify-content-between">
-              <button class = "btn btn-light"  (click) ="addToCart()">Add to Cart</button>
-              <button class = "btn btn-warning"  (click) ="onBuy()">BUY</button>
+    <div class="row mt-2">
+        <div class="col-md-11 col-lg-11 col-11 mx-auto ">
+            <div *ngFor="let item of items" class="row ">
+                <div class="col-md-5 col-lg-5 col-11 p-2 ">
+                    <div class="card">
+                        <img [src]="item.imageUrl" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <!--product-info -->
+                <div class="col-md-6 col-lg-6 col-11 p-2">
+                    <div class="row">
+                        <div class="col-11">
+                            <h2 class="mb-2">{{item.name}}</h2>
+                            <p class="mb-2">Specification: {{item.specification}}</p>
+                            <p class="mb-2">Description: {{item.description}}</p>
+                            <p class="mb-2">{{item.price}}</p>
+                        </div>
+
+                        <div class="action col-6 d-flex justify-content-between">
+                            <button class="btn btn-secondry" (click)="addToCart()">Add to Cart</button>
+                            <button class="btn btn-warning" (click)="onBuy()">BUY</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
     <!--more Product-->
     <div class="row mt-2 p-2 ">
-      <div class="  col-md-12  col-lg-12 justify-content-between ">
-        <div class="row  g-3  ">
-          <!--Product in one View-->
-          <div class="col-md-2 col-lg-2 col-6  shadow  " (click) = "product_detail()">
-            <!--image div-->
-            <div class="card  ">
-              <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+        <div class="  col-md-12  col-lg-12 justify-content-between ">
+            <div class="row  g-3  ">
+                <!--Product in one View-->
+                <div class="col-md-2 col-lg-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
             </div>
-            <p class="mb-1">Name</p>
-            <p class="mb-1">price</p>
-          </div>
-          <div class="col-md-2 col-lg-2 col-6  shadow  " (click) = "product_detail()">
-            <!--image div-->
-            <div class="card  ">
-              <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
-            </div>
-            <p class="mb-1">Name</p>
-            <p class="mb-1">price</p>
-          </div>
-          <div class="col-md-2 col-6  shadow  " (click) = "product_detail()">
-            <!--image div-->
-            <div class="card  ">
-              <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
-            </div>
-            <p class="mb-1">Name</p>
-            <p class="mb-1">price</p>
-          </div>
-          <div class="col-md-2 col-6  shadow  " (click) = "product_detail()">
-            <!--image div-->
-            <div class="card  ">
-              <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
-            </div>
-            <p class="mb-1">Name</p>
-            <p class="mb-1">price</p>
-          </div>
-          <div class="col-md-2 col-6  shadow  " (click) = "product_detail()">
-            <!--image div-->
-            <div class="card  ">
-              <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
-            </div>
-            <p class="mb-1">Name</p>
-            <p class="mb-1">price</p>
-          </div>
-          <div class="col-md-2 col-6  shadow  " (click) = "product_detail()">
-            <!--image div-->
-            <div class="card  ">
-              <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
-            </div>
-            <p class="mb-1">Name</p>
-            <p class="mb-1">price</p>
-          </div>
         </div>
-      </div>  
-    </div>    
+    </div>
 </div>

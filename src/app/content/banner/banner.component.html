@@ -1,6 +1,6 @@
-<carousel class = 'slider'  *ngFor ='let banner of banners' >
-  <slide>
-    <img [src]="banner.imageUrl" alt="first slide" >
+<carousel>
+  <slide *ngFor ='let banner of banners'>
+    <img [src]="banner.imageUrl" alt="first slide">
     <div class="carousel-caption d-none d-md-block">
       <h3>First slide label</h3>
       <p>Nulla vitae elit libero, </p>

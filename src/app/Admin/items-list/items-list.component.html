@@ -21,38 +21,39 @@
   </mat-expansion-panel>
 </mat-accordion>-->
 <div class="container-fluid">
-  <div class="row m-3 px-5">
-    <h2>Items In Stck</h2>
-  </div>
-  <div *ngFor ='let item of items' class="row mt-2 gy-10">
-            <!--Repeating row-->
-    <div class="col-md-10 col-11 col-lg-10 col-11 mx-auto shadow ">
-      <div class="row">
-        <!--Repeating row-->
-        <div class=" col-md-4 col-lg-6 mt-2  justify-content-center bg-light align-items-center">
-          <!--image div-->
-              <div class="card">
-                <img [src]="item.imageUrl" alt="product_img" class="thumbnail-image" onerror ="this.src='assets/img/default.png'">
-              </div>
-            <!--Product detail div-->
-        </div>
-        <!--detail view -->
-        <div class="col-md-6 p-2 col-lg-6">
-          <div class="row">
-            <div class="col-11">
-              <h4>{{item.name}}</h4>
-              <p class="mb-2">{{item.specification}}</p>
-              <p class="mb-2">{{item.quantity}}</p>
-              <p class="mb-2">{{item.description}}</p>
-            </div>
-              <div class="col-6 mb-2 d-flex justify-content-between">
-                <button class="btn btn-info" (click)="updateItem()">Edit</button>
-                <button class="btn btn-danger" (click)="onDelete(item.id)">Delete</button>
-              </div>
-          </div>
-        </div>
-      </div>
+    <div class="row m-3 px-5">
+        <h2 appFirstDir>Items In Stck</h2>
     </div>
-    <!--two-->
-  </div>
+    <div *ngFor='let item of items' class="row mt-2 gy-10">
+        <!--Repeating row-->
+        <div class="col-md-10 col-11 col-lg-10 col-11 mx-auto shadow ">
+            <div class="row">
+                <!--Repeating row-->
+                <div class=" col-md-4 col-lg-6 mt-2  justify-content-center bg-light align-items-center">
+                    <!--image div-->
+                    <div class="card">
+                        <img [src]="item.imageUrl" alt="product_img" class="thumbnail-image" onerror="this.src='assets/img/default.png'">
+                    </div>
+                    <!--Product detail div-->
+                </div>
+                <!--detail view -->
+                <div class="col-md-6 p-2 col-lg-6">
+                    <div class="row">
+                        <div class="col-11">
+                            <h4>{{item.name}}</h4>
+                            <p class="mb-2">{{item.specification}}</p>
+                            <p class="mb-2">{{item.quantity}}</p>
+                            <p class="mb-2">{{item.price}}</p>
+                            <p class="mb-2">{{item.description}}</p>
+                        </div>
+                        <div class="col-6 mb-2 d-flex justify-content-between">
+                            <button class="btn btn-info" [routerLink]="['/admin/editItem', item.id]">Edit</button>
+                            <button class="btn btn-danger" (click)="onDelete(item.id)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--two-->
+    </div>
 </div>

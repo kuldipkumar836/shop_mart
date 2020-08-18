@@ -1,16 +1,14 @@
 mat-form-field {
     width: 100%;
   }
-  .image-preview {
-    height: 5rem;
-    margin: 1rem 0;
-  }
+ 
   .card{
     border: none;
   }
   
-  .image-preview img {
-    height: 100%;
+  img{
+    max-width: 250px;
+    max-height: 200px;
   }
   mat-spinner{
     margin: auto;

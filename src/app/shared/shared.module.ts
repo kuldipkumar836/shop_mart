@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from './angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FirstDirDirective } from './first-dir.directive';
+
 
 @NgModule({
   declarations: [
+    FirstDirDirective
   ],
   imports: [
     CommonModule,
@@ -15,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FirstDirDirective
   ]
 })
 export class SharedModule { }

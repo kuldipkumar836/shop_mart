@@ -30,16 +30,55 @@
           </div>
         </form>
       </div>
+        <div class="col-md-6 col-11 shadow ">
+      <div *ngFor = "let item of items"  class="row">
+            <div class=" col-6 mt-2  justify-content-center bg-light align-items-center">
+              <!--image div-->
+              <div class="card">
+                <img [src]="item.imageUrl" alt="product_img" class="thumbnail-image" onerror ="this.src='assets/img/default.png'">
+              </div>
+              <!--Product detail div-->
+            </div>
+          <div class="col-md-6 p-2">
+          <div class="col-6 py-2">
+            <div class = "row">
+              <h4 class="mb-2">{{item.name}}</h4>
+              </div>
+              <div class = "row">
+                <div class="col-6 mb-2 d-flex justify-content-between">
+                <p class="mb-2">Total Quantity: {{item.quantity}}</p>&nbsp;
+                <p class="mb-2">Total Price: {{item.price}}</p>
+              </div>
+            </div>          
+        </div>
+          </div>
+      </div>
+      <!--second item-->
+      <div class="row">
+            <div class=" col-6 mt-2  justify-content-center bg-light align-items-center">
+              <!--image div-->
+              <div class="card">
+                <img src="" alt="product_img" class="thumbnail-image" onerror ="this.src='assets/img/default.png'">
+              </div>
+              <!--Product detail div-->
+            </div>
+          <div class="col-md-6 p-2">
+          <div class="col-6 py-2">
+            <div class = "row">
+              <h4 class="mb-2">name</h4>
+              </div>
+              <div class = "row">
+                <div class="col-6 mb-2 d-flex justify-content-between">
+                <p class="mb-2">quantity</p>
+                <p class="mb-2">price</p>
+              </div>
+            </div>          
+        </div>
+          </div>
+      </div>
     </div>
     <!--Payment div-->
-      <div class="col-md-6 col-11 shadow ">
-        <form [formGroup] = 'form'(ngSubmit) = "paymentMethode()">
-          <div class="col-12 justify-conten-between ">
-            <label >Select Payment Mode</label>
-          <input class="form-control" type="radio" formControlName="payMpde" ngModel required>
-          </div>
-        </form>
-      </div>
+
     </div>
   </div>
 </div>

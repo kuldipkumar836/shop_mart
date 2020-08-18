@@ -1,15 +1,16 @@
 <div class="container-fluid">
   <div class="row mt-2">
     <div class="col-md-12 col-lg-12 col-11 mx-auto">
-      <div class="row g-3">
+      <div class="row g-3"  >
         <div class="col-md-7 col-11 col-lg-7">
           <div class="row">
             <h2 class="m-2 px-5">Uplaod Banners</h2>
             <div class="col-11">
           <div class="card">
-            <img src="assets/img/img_3.jpg" alt="product_img" class="img-fluid">
+            <img [src]="imagePreview" alt="product_img" class="img-fluid">
           </div>
-          <button class="btn mt-3 btn-success" (click) = 'file.click()' >Upload image</button>
+          <button class="btn mt-3 btn-info" (click) = 'file.click()' >select image</button>
+          <button class="btn mt-3 btn-success" (click) = 'onSubmit()' >Upload image</button>
           </div>
           </div>
           <div class="row">
@@ -24,15 +25,17 @@
             </div>
           </div>
         </div>
+        <h2 class="m-2 px-5">Uplaoded Banners</h2>
         <div class="col-md-4 col-lg-4 col-11">
-          <h2 class="m-2 px-5">Uplaoded Banners</h2>
+          <div class="row" *ngFor = "let banner of banners">
           <div class="card">
-            <img src="assets/img/img_3.jpg" alt="product_img" class="img-fluid">
+            <img [src] ="banner.imageUrl" alt="product_img" class="img-fluid">
           </div>
           <div class="col-6 mt-3 d-flex justify-content-between">
             <button class="btn btn-info" (click)="updateFile()">Edit</button>
             <button class="btn btn-danger" (click)="deleteFile()">Delete</button>
           </div>
+        </div>
         </div>
       </div>
     </div>

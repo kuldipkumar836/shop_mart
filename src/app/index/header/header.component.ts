@@ -4,6 +4,7 @@ import {MatIconRegistry} from '@angular/material/icon';
 import { CartService } from 'src/app/services/cart.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Subscription } from "rxjs";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +13,10 @@ import { Subscription } from "rxjs";
 })
 export class HeaderComponent implements OnInit {
   public cartBadge: number ;
-    userIsAuthenticated = false;
+    userIsAuthenticated : boolean;
   private authListenerSubs: Subscription;
-
   constructor( private authService: AuthService,
+    private router: Router,
      public cartService: CartService,
                iconRegistry: MatIconRegistry, 
                sanitizer: DomSanitizer
@@ -34,6 +35,9 @@ export class HeaderComponent implements OnInit {
         this.userIsAuthenticated = isAuthenticated;
       });
        this.cartService.currentItemValue.subscribe(cartBadge => this.cartBadge = cartBadge);
+       this.router.navigate(['/']);
   }
-
+  onLogout(){
+    this.authService.logoutUser();
+  }
 }

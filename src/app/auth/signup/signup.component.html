@@ -7,7 +7,7 @@
             <h2 class="py-4 font-weight-bold">New User Registration</h2>
             <div class="signUp">
               <form (submit)="onSignup(signupForm)" #signupForm="ngForm" >
-                <div class="form-group col-6 justify-content-between ">
+                <div  class="form-group col-6 justify-content-between ">
                   <label for="email">Email</label>
                   <input  name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
                 </div>
@@ -24,7 +24,7 @@
               </form>
             </div>
           </div>
-          <div class="auth-provider col-11 ">
+          <div appFirstDir class="auth-provider col-11 ">
             <div class="mb-3 google">
               <button class=" btn bg-dark btn-primary btn-block "><i class="fa fa-google"></i> Connect with Google </button>
             </div>

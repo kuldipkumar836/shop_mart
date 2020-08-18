@@ -24,8 +24,8 @@ export class ItemsListComponent implements OnInit {
   })
   
   }
-  updateItem(){
-    
+  updateItem(itemId: string){
+  
   }
   onDelete(itemId: string){
     this.itemServise.deleteItem(itemId).then(() => {
@@ -39,6 +39,4 @@ export class ItemsListComponent implements OnInit {
   });
     })
   }
-
-
 }

@@ -18,6 +18,7 @@ import { CartService } from './services/cart.service';
 import { SharedModule } from './shared/shared.module';
 import { ProductService } from './services/product.service';
 import { AuthService } from './auth/auth.service';
+import { BillingService } from './order/billing.service';
 
 
 /* to load and set en.json as the default application language */
@@ -39,7 +40,7 @@ import { AuthService } from './auth/auth.service';
 		RouterModule.forRoot(AppRoutes),
 		CarouselModule.forRoot()
 	],
-	providers: [ CartService, ProductService, AuthService, { provide: StorageBucket, useValue: 'gs://shopingzone-77ff1.appspot.com/' }
+	providers: [ CartService, ProductService, BillingService, AuthService, { provide: StorageBucket, useValue: 'gs://shopingzone-77ff1.appspot.com/' }
 	],
 	bootstrap: [ AppComponent ],
 })

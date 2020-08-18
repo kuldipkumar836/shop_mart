@@ -6,6 +6,38 @@
     border: none;
 }
 img{
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 350px;
+    max-height: 200px;
 }
+.page-link:hover {
+     text-decoration: none; 
+     color: #495057; 
+     outline: none !important; 
+     } 
+.page-link:focus { 
+    box-shadow: none;
+     }
+.page-link { 
+    line-height: 16px; 
+    width: 45px; 
+    font-size: 1rem;
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     color: #495057;
+      } 
+.page-item input { 
+    line-height: 22px; 
+    padding: 3px;
+    font-size: 15px; 
+    display: flex; 
+    justify-content: center;
+     align-items: center; 
+     text-align: center; 
+     } 
+
+/*
+
+
+.page-link:hover { text-decoration: none; color: #495057; outline: none !important; } 
+.page-link:focus { box-shadow: none; }*/
