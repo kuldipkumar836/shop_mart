@@ -5,7 +5,7 @@
     <span class="space"></span>
     <ul>
         <li>
-            <a mat-button routerLink="/cart/cartItems" routerLinkActive="">
+            <a mat-button routerLink="/cartItems" routerLinkActive="">
                 <mat-icon matBadgeColor="accent" matBadge="{{cartBadge}}" svgIcon="shopping_cart"></mat-icon>
             </a>
         </li>
@@ -25,12 +25,27 @@
 </mat-toolbar>
 <!-- <nav>
     <div class="logo">
-        <h1>ShopZone</h1>
+        <h1>
+            <a routerLink="/">ShopZone</a>
+        </h1>
     </div>
     <div class="menu">
-        <a href="">Admin</a>
-        <a href="">SignUp</a>
-        <a href="">SignIn</a>
-        <a href="">SignOut</a>
+        <span>
+                <a routerLink="/cartItems" routerLinkActive="">
+            <i class="fa fa-shopping-cart fa-2x"><span class="badge badge-danger"></span></i>
+        </a>
+        </span>
+        <span>
+                <a routerLink="/admin/header" routerLinkActive="">Admin</a>
+        </span>
+        <span *ngIf="!userIsAuthenticated">
+                <a routerLink="/auth/signup" routerLinkActive="">SignUp</a>
+        </span>
+        <span *ngIf="!userIsAuthenticated">
+                <a routerLink="/auth/login" routerLinkActive="">SignIn</a>
+        </span>
+        <span *ngIf="userIsAuthenticated">
+                <a (click)="onLogout()" routerLinkActive="">SignOut</a>
+        </span>
     </div>
 </nav> -->

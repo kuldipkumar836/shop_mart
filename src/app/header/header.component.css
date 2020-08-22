@@ -15,7 +15,9 @@ nav {
     width: 40%;
     color: white;
     /* background-color: black; */
-    padding-left: 55px;
+    padding-left: 2px;
+    padding-top: 10px;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -28,17 +30,18 @@ nav {
 
 .menu a {
     text-decoration: none;
+    color: #2d3436;
     text-transform: uppercase;
-    font-weight: bold;
     position: relative;
 }
 
-.menu a::before {
+.menu a:before {
     content: "";
     position: absolute;
     left: 0;
+    top: 100%;
     width: 0;
-    height: 0;
+    height: .2rem;
     background-color: #000;
     transition: all 0.5s linear;
 }

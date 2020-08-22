@@ -1,0 +1,138 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-11 col-11 mx-auto">
+            <div class="row mt-5 gx-2">
+                <!--Left Side div-->
+                <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 mb-lg-0 shadow">
+                    <h2 class="py-4 font-weight-bold">Cart</h2>
+                    <div class="card p-4">
+                        <div *ngFor="let item of items" class="row mb-2">
+                            <app-cart-item [item]='item' (valueChanges)="getItemDetails($event)"></app-cart-item>
+                        </div>
+                        <hr class="my-2">
+                        <!--On Buy Product-->
+                        <div *ngIf="proId!=null" class="row gy-4">
+                            <!--cart image div-->
+                            <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                <img [src]="product_.imageUrl" alt="cart-image" class="img-fluid">
+                            </div>
+                            <!--Product detail div-->
+                            <div class="col-md-7 col-11 mx-auto mb-2 px-4">
+                                <div class="row">
+                                    <div class="col-6 card-title">
+                                        <h1 class="mb-2">{{product_.name}}</h1>
+                                        <p class="mb-2">{{product_.specification}}</p>
+                                        <p class="mb-2">size M</p>
+                                    </div>
+                                    <!--quantity inc div-->
+                                    <div class="col-6 mt -2">
+                                        <ul class="pagination justify-content-end set-quantity">
+                                            <li class="page-item">
+                                                <button class="page-link" (click)="increaseItem()"><span><i class="fa fa-plus fa-2x" aria-hidden="true"></i></span></button>
+                                            </li>
+                                            <li class="page-item">
+                                                <input #textbox class="page-link" type="text" name="" value="{{quantity}}">
+                                            </li>
+                                            <li class="page-item">
+                                                <button class="page-link" (click)="decreaseItem()"><i class=" fa fa-minus fa-2x" aria-hidden="true"></i></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--remove and price-->
+                                <div class="row">
+                                    <div class="col-8 d-flex justify-content-between remove_wish">
+                                        <p (click)="removeItemFormCart(proId)"> <i class="fa fa-trash" aria-hidden="true"></i>Remove item from cart</p>
+                                        <p> <i class="fa fa-heart" aria-hidden="true"></i>Move to Wishlist</p>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end remove_wish">
+                                        <p>Rs <span #product_price>{{product_.price}}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Right Side div-->
+                <div class="col-md-12 col-lg-4 col-11 mx-auto main_car mb-lg-0 shadow">
+                    <div class="row ">
+                        <div class="right-side p-3 bg-white shadow">
+                            <h2 class="mb-5">Total Amount</h2>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Product Amount</p>
+                                <p>Rs <span #product_total_amt>0.00</span></p>
+                            </div>
+                            <div class="price_indiv mb-2 d-flex justify-content-between">
+                                <p>Shiping Charge</p>
+                                <p><span #shipping_charge>50.00</span></p>
+                            </div>
+                            <hr/>
+                            <div class="total_amt mt-2 mb-2 d-flex justify-content-between">
+                                <p>Total Amount(inc VAT)</p>
+                                <p>Rs <span #total_cart_amt>0.00</span></p>
+                            </div>
+                            <button class="btn btn-warning " (click)="checkout()">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Bottom Product Row -->
+            </div>
+        </div>
+    </div>
+    <!--more Product-->
+    <div class="row mt-2 p-2 ">
+        <div class="  col-md-12  col-lg-12 justify-content-between ">
+            <div class="row  g-3  ">
+                <!--Product in one View-->
+                <div class="col-md-2 col-lg-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+                <div class="col-md-2 col-6  shadow  " (click)="product_detail()">
+                    <!--image div-->
+                    <div class="card  ">
+                        <img src="assets/img/img_4.jpg" class="img-fluid" alt="product_img">
+                    </div>
+                    <p class="mb-1">Name</p>
+                    <p class="mb-1">price</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

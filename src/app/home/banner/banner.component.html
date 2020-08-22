@@ -1,0 +1,16 @@
+<carousel>
+    <slide *ngFor='let banner of banners'>
+        <img [src]="banner.imageUrl" alt="first slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, </p>
+        </div>
+    </slide>
+</carousel>
+<!-- <div *ngFor='let banner of banners' id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img [src]="banner.imageUrl" class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div> -->

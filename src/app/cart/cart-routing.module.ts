@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CartItemComponent } from './cart-item/cart-item.component';
-import { AuthGuard } from '../shared/auth.guard';
+import { CartComponent } from './cart.component';
 
 const routes: Routes = [
-  { path: 'cartItem/:itemId', component: CartItemComponent},
-  { path: 'cartItems', component: CartItemComponent},
+  //{ path: '', component: CartComponent },
+  { path: 'cartItems', component: CartComponent },
+  { path: 'cartItem/:itemId', component: CartComponent},
 ];
 
 @NgModule({

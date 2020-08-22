@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-import { Product } from '../Admin/product.model';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { Cart } from 'src/app/cart/cart.model';
-import { ProductShareingService } from '../services/product-shareing.service';
-import { AuthService } from '../auth/auth.service';
-
+import { AuthService } from 'src/app/auth/auth.service';
+import { ProductShareingService } from 'src/app/services/product-shareing.service';
+import { Product } from 'src/app/Admin/product.model';
 @Component({
-  selector: 'app-content',
-  templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class ContentComponent implements OnInit {
+export class HomeComponent implements OnInit {
   items: Product[];
   item_val = [];
   isLoading: boolean;
@@ -51,5 +50,5 @@ export class ContentComponent implements OnInit {
     this.shareId.changeItemId(id);
     this.router.navigateByUrl(`/product/itemInfo/${id}`);
   }
-
 }
+

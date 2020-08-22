@@ -1,0 +1,27 @@
+<div class="mt-2">
+    <app-banner></app-banner>
+</div>
+<div class="container-fluid mt-2">
+    <div class="row mt-2 p-2">
+        <div class="  col-md-12 col-lg-12 mx-auto  ">
+            <div class="row gx-3  ">
+                <div class="col-md-3 col-lg-3 sidenav">
+                    <ul>
+                        <li><a>Mobile</a></li>
+                        <li><a>Clothe</a></li>
+                        <li><a>Grosserry</a></li>
+                    </ul>
+                </div>
+                <!--Product in one View-->
+                <div class="col-md-8 col-lg-8 ">
+                    <div class="row">
+                        <div appFirstDir *ngFor='let item of items' class=" shadow col-md-3 col-lg-3 mb-2 col-6" (click)="product_detail(item.id)">
+                            <!--image div-->
+                            <!-- <app-content [item]='item'></app-content> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
